@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karol & Danilo · Wedding · Boda</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            durazno: '#faf4f2',
+            terracota: '#fa8b37',
+            marigold: '#fa8b37',
+            arcilla: '#eb6e53',
+            fuerte1: '#EB6E53',
+            fuerte2: '#FF8469',
+            fuerte3: '#ac0a25',
+            fuerte4: '#94081F'
+          },
+          fontFamily: {
+            display: ['"Montaga"', 'serif'],
+            sans: ['"Raleway"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
+
+    /* hide Spanish by default – JS will swap */
+    .lang-es { display: none; }
+  </style>
+</head>
+
+<body class="bg-durazno text-fuerte3 font-sans font-light leading-relaxed">
+
+  <!-- Navigation -->
+  <header class="fixed w-full bg-durazno/20 backdrop-blur z-10 shadow-sm">
+    <nav class="container mx-auto flex justify-between items-center py-3 px-4 text-sm font-semibold">
+      <a href="#hero" class="font-display text-2xl tracking-wide">K & D</a>
+
+      <div class="flex items-center gap-6">
+        <!-- Links – English -->
+        <div class="space-x-4 lang-en">
+          <a href="#programa" class="hover:text-terracota">Schedule</a>
+          <a href="#dresscode" class="hover:text-terracota">Dress&nbsp;Code</a>
+          <a href="#lugar" class="hover:text-terracota">Venue</a>
+        </div>
+
+        <!-- Links – Spanish -->
+        <div class="space-x-4 lang-es">
+          <a href="#programa" class="hover:text-terracota">Programa</a>
+          <a href="#dresscode" class="hover:text-terracota">Código&nbsp;de&nbsp;Vestimenta</a>
+          <a href="#lugar" class="hover:text-terracota">Lugar</a>
+        </div>
+
+        <!-- Toggle button -->
+        <button id="langToggle"
+                class="border border-[#DB516E] text-[#DB516E] px-3 py-1 rounded-full text-xs font-semibold hover:bg-[#DB516E] hover:text-white transition">
+          ES
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative pt-28 pb-20 bg-gradient-to-b from-durazno to-[#fbe3d5] text-center overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-[url('flowers-header.png')] bg-cover bg-center opacity-25 pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 max-w-4xl">
+      <!-- Heading -->
+      <h1 class="leading-tight mb-6">
+        <span class="block text-4xl md:text-6xl lang-en" style="font-family: 'Montaga', serif;">Celebrating a Shared Journey</span>
+        <span class="block text-4xl md:text-6xl lang-es" style="font-family: 'Montaga', serif;">Celebración de un camino compartido</span>
+
+        <span class="block text-4xl md:text-5xl text-[#DB516E] mt-2 font-display">Karol&nbsp;&amp;&nbsp;Danilo</span>
+      </h1>
+
+      <!-- Illustration -->
+      <img src="dancers_transparent.png" alt="Dancers" class="mx-auto w-full max-w-lg mb-8">
+
+      <!-- Paragraphs -->
+      <div class="mt-8 space-y-4 text-base md:text-lg max-w-3xl mx-auto text-center">
+        <p class="lang-en">Ten years ago, we chose to walk together. After weaving many stories, we now open a <span class="font-semibold">new chapter.</span></p>
+        <p class="lang-es">Hace diez años elegimos caminar juntos. Con este tiempo de historias entretejidas, abrimos un <span class="font-semibold">nuevo portal.</span></p>
+
+        <p class="lang-en">This celebration honors the personal work, silent complicity, and the fire that keeps our union alive — and <span class="font-semibold">we’re thrilled you’re part of it.</span></p>
+        <p class="lang-es">Es por eso que celebramos y nos emociona que seas parte de este momento que honra el trabajo personal, la complicidad silenciosa y el fuego que sostiene esta <span class="font-semibold">unión viva.</span></p>
+
+        <p class="lang-en">It will be a <span class="font-semibold">festive ritual</span> to share the joy of continuing to choose one another, and the abundance we’ve cultivated together.</p>
+        <p class="lang-es">Será un <span class="font-semibold">ritual festivo</span> para compartir la fortuna de seguir eligiéndonos y la abundancia que hemos cultivado juntos.</p>
+
+        <p class="lang-en">It’s also a <span class="font-semibold">moment of gratitude</span> for the network that has supported us — including those who are no longer with us but remain present in spirit.</p>
+        <p class="lang-es">Así como también será un momento en confianza para <span class="font-semibold">agradecer a la red que nos ha sostenido,</span> de la cual tú formas parte, y honrar a quienes ya no tienen voz pero siguen presentes en nuestro camino.</p>
+
+        <p class="lang-en"><span class="font-semibold">We invite you</span> to dance, laugh, remember, and open this new cycle with us, with full hearts.</p>
+        <p class="lang-es"><span class="font-semibold">Te esperamos</span> con el corazón contento para a bailar, reír, recordar y abrir juntxs un nuevo ciclo.</p>
+      </div>
+
+      <!-- Date -->
+      <p class="mt-12 text-2xl md:text-4xl text-[#D32674] tracking-wider font-display">
+        <span class="lang-en">25 · OCTOBER · 2025</span>
+        <span class="lang-es">25 · OCTUBRE · 2025</span>
+        QUERÉTARO
+      </p>
+    </div>
+  </section>
+
+  <!-- Schedule / Programa -->
+  <section id="programa" class="py-16 bg-[#F3CBB4]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl text-center mb-10 font-semibold text-[#DB516E]">
+        <span class="lang-en">Schedule</span>
+        <span class="lang-es">Programa</span>
+      </h2>
+
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+        <div class="bg-durazno p-6 rounded-2xl shadow flex flex-col items-center">
+          <span class="text-[#D32674] text-3xl mb-2 font-semibold">1:45 p.m.</span>
+          <p class="font-semibold">
+            <span class="text-[#DB516E] lang-en">Welcome&nbsp;cocktail</span>
+            <span class="text-[#DB516E] lang-es">Cóctel&nbsp;de&nbsp;bienvenida</span>
+          </p>
+        </div>
+
+        <div class="bg-durazno p-6 rounded-2xl shadow flex flex-col items-center">
+          <span class="text-[#D32674] text-3xl mb-2 font-semibold">2:15 p.m.</span>
+          <p class="font-semibold">
+            <span class="text-[#DB516E] lang-en">Ceremony</span>
+            <span class="text-[#DB516E] lang-es">Ceremonia</span>
+          </p>
+        </div>
+
+        <div class="bg-durazno p-6 rounded-2xl shadow flex flex-col items-center">
+          <span class="text-[#D32674] text-3xl mb-2 font-semibold">3:30 p.m.</span>
+          <p class="font-semibold">
+            <span class="text-[#DB516E] lang-en">Reception</span>
+            <span class="text-[#DB516E] lang-es">Recepción</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-8 text-center text-base">
+        <span class="lang-en">🍷🎉 There will be food, wine, beer, and a bit of mezcal to toast with.<br>If you’re craving something else, feel free to bring your bottle!</span>
+        <span class="lang-es">🍷🎉 Habrá comida, vino, cerveza y un mezcalito para brindar.<br>Si se te antoja otra cosa, ¡siéntete libre de traer tu botella!</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Dress Code / Código de Vestimenta -->
+  <section id="dresscode" class="py-16 bg-[#faf4f2]">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <h2 class="text-3xl mb-6 font-semibold text-[#DB516E]">
+        <span class="lang-en">Dress Code</span>
+        <span class="lang-es">Código de Vestimenta</span>
+      </h2>
+
+      <p class="mb-4">
+        <span class="lang-en">👗👨🏼‍🎤 Be yourself and dress comfortably! This celebration isn’t traditional, so your outfit doesn’t have to be either!</span>
+        <span class="lang-es">👗👨🏼‍🎤 ¡Sé tú mismx y ven cómodx! Esta celebración no es típica, ¡así que tu look tampoco tiene que serlo!</span>
+      </p>
+
+      <p class="mb-6">
+        <span class="lang-en">We're celebrating joy, love, friendship, and abundance — and invite you to wear colors from this palette:</span>
+        <span class="lang-es">Estamos celebrando la alegría, el amor, la amistad y la prosperidad, por lo que te invitamos a usar colores de esta paleta:</span>
+      </p>
+
+      <!-- Palette -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="w-12 h-12 rounded-full bg-[#FCFFEB] border" title="#FCFFEB"></span>
+        <span class="w-12 h-12 rounded-full bg-[#F8F0A9] border" title="#F8F0A9"></span>
+        <span class="w-12 h-12 rounded-full bg-[#F2D676] border" title="#F2D676"></span>
+        <span class="w-12 h-12 rounded-full bg-[#EDB043] border" title="#EDB043"></span>
+        <span class="w-12 h-12 rounded-full bg-[#FA8B37] border" title="#FA8B37"></span>
+        <span class="w-12 h-12 rounded-full bg-[#EB6E53] border" title="#EB6E53"></span>
+        <span class="w-12 h-12 rounded-full bg-[#DB516E] border" title="#DB516E"></span>
+        <span class="w-12 h-12 rounded-full bg-[#D32674] border" title="#D32674"></span>
+        <span class="w-12 h-12 rounded-full bg-[#B9133F] border" title="#B9133F"></span>
+        <span class="w-12 h-12 rounded-full bg-[#AC0A25] border" title="#AC0A25"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue / Lugar -->
+  <section id="lugar" class="py-16 bg-[#F3CBB4]">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row gap-8 items-center">
+
+      <div class="md:w-1/2 flex flex-col items-center">
+        <img src="logo-casamarte_transparent.png" alt="CasAmarte logo" class="w-32 mb-4">
+        <img src="casamarte.jpg" alt="CasAmarte" class="rounded-2xl shadow-md">
+      </div>
+
+      <div class="md:w-1/2">
+        <h2 class="text-3xl mb-4 font-semibold text-[#DB516E]">CasAmarte</h2>
+
+        <p class="mb-4">Guayule&nbsp;46, Col.&nbsp;Los&nbsp;Cedros, Querétaro, Qro.</p>
+
+        <a href="https://www.google.com/maps/place/Guayule+46,+Los+Cedros,+76165+Santiago+de+Querétaro,+Qro."
+           target="_blank"
+           class="inline-block bg-[#D32674] text-[#FCFFEB] px-5 py-2 rounded-full shadow hover:bg-fuerte1 transition font-semibold">
+          <span class="lang-en">View&nbsp;on&nbsp;Google&nbsp;Maps</span>
+          <span class="lang-es">Ver&nbsp;en&nbsp;Google&nbsp;Maps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accommodation / Hospedaje -->
+  <section id="hospedaje" class="py-16 bg-[#faf4f2]">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <h2 class="text-3xl mb-6 font-semibold text-[#DB516E]">
+        <span class="lang-en">Accommodation</span>
+        <span class="lang-es">Hospedaje</span>
+      </h2>
+
+      <p class="mb-6">
+        <span class="lang-en">To those traveling from afar to join us, we deeply appreciate it. Here are some accommodation options in the heart of Querétaro:</span>
+        <span class="lang-es">A quienes viajan para acompañarnos, valoramos profundamente su tiempo y esfuerzo. Aquí algunas opciones de hospedaje en el corazón de Querétaro:</span>
+      </p>
+
+      <!-- Lists -->
+      <div class="text-center space-y-6">
+        <div>
+          <p class="mb-1">
+            
+            <span class="font-semibold lang-en">🛏️ Convenient &amp; pleasant</span>
+            <span class="font-semibold lang-es">Cómodos y cercanos</span>
+            <span class="lang-en">(8–10&nbsp;min walk from CasAmarte)</span>
+            <span class="lang-es">(a 8–10&nbsp;min a pie de CasAmarte)</span>
+          </p>
+          <ul class="list-disc list-inside ml-4">
+            <li>
+              <a href="https://theandy.mxhotel.site/en/" target="_blank" class="underline hover:text-terracota">The Andy Hotel</a>
+              – MXN 1,200–1,500
+              <span class="lang-en">per night (approx. USD 60–75)</span>
+              <span class="lang-es">por noche (aprox. USD 60–75)</span>
+            </li>
+            <li>
+              <a href="https://en.hotelmamacarlota.com/" target="_blank" class="underline hover:text-terracota">Hotel Mamá&nbsp;Carlota</a>
+              – MXN 1,200–1,500
+              <span class="lang-en">per night (USD 60–75)</span>
+              <span class="lang-es">por noche (USD 60–75)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="mb-1">
+            <span class="font-semibold lang-en">✨ Charming in the Historic&nbsp;Center</span>
+            <span class="font-semibold lang-es">Con encanto en el Centro&nbsp;Histórico</span>
+            <span class="lang-en">(12–16&nbsp;min walk from CasAmarte)</span>
+            <span class="lang-es">(a 12–16&nbsp;min a pie de CasAmarte)</span>
+          </p>
+          <ul class="list-disc list-inside ml-4">
+            <li>
+              <a href="https://www.xantli.com/casa-once/es" target="_blank" class="underline hover:text-terracota">Hotel Casa&nbsp;Once</a>
+              – MXN 2,000
+              <span class="lang-en">per night (approx. USD 100)</span>
+              <span class="lang-es">por noche (aprox. USD 100)</span>
+            </li>
+            <li>
+              <a href="https://hotelcriol.com/en" target="_blank" class="underline hover:text-terracota">Hotel Criol</a>
+              – MXN 2,500
+              <span class="lang-en">per night (USD 125)</span>
+              <span class="lang-es">por noche (USD 125)</span>
+            </li>
+            <li>
+              <a href="https://www.donaurraca.com/" target="_blank" class="underline hover:text-terracota">Doña&nbsp;Urraca Hotel&nbsp;&amp;&nbsp;Spa</a>
+              – MXN 3,000
+              <span class="lang-en">per night (USD 150)</span>
+              <span class="lang-es">por noche (USD 150)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-6">
+        <span class="lang-en">If you'd like help booking or need personalized recommendations, we’d be happy to coordinate for you.</span>
+        <span class="lang-es">Si necesitas ayuda para reservar o recomendaciones personalizadas, con gusto coordinamos por ti.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#faf4f2] text-center py-6 text-sm font-semibold text-[#DB516E]">
+    <span class="lang-en">Thank you for being part of this moment – Karol&nbsp;&amp;&nbsp;Danilo.</span>
+    <span class="lang-es">Gracias por ser parte de este momento – Karol&nbsp;&amp;&nbsp;Danilo.</span>
+  </footer>
+
+  <!-- Language toggle script -->
+  <script>
+    (function () {
+      const toggleBtn = document.getElementById('langToggle');
+      const setLang = (lang) => {
+        document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? 'block' : 'none');
+        document.querySelectorAll('.lang-es').forEach(el => el.style.display = (lang === 'es') ? 'block' : 'none');
+        localStorage.setItem('weddingLang', lang);
+        toggleBtn.textContent = (lang === 'en') ? 'ES' : 'EN';
+      };
+
+      toggleBtn.addEventListener('click', () => {
+        const current = localStorage.getItem('weddingLang') || 'es';
+        setLang(current === 'en' ? 'es' : 'en');
+      });
+
+      setLang(localStorage.getItem('weddingLang') || 'es');
+    })();
+  </script>
+</body>
+</html>
